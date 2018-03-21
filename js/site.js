@@ -6,12 +6,10 @@ if (!sessionStorage.getItem("playedAnimation")) {
 
 // Write your Javascript code.
 $(function () {
-    $("#parallax1").click(() => $("body").toggleClass("parallax1"));
-    $("#parallax2").click(() => $("body").toggleClass("parallax2"));
     $("#navbarLogo").click(() => $("body").toggleClass("navbarLogo"));
     $("#shadows").click(() => $("body").toggleClass("no-shadows"));
-    $("#fontUbuntu").click(() => $("body").toggleClass("font-ubuntu"));
-    $("#fontSquash").click(() => $("body").toggleClass("font-squash"));
+    $("#fontNormal").click(() => $("body").toggleClass("font-weight-normal"));
+    $("#headingBold").click(() => $("body").toggleClass("heading-bold"));
     $("#pinExperimental").click(() => $(".experimental").toggleClass("pin"));
 });
 

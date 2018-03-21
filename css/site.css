@@ -1,10 +1,16 @@
 body {
     padding-top: 55px;
+    font-family: Ubuntu, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-weight: 300;
 }
 
     body.user-signed-in {
         padding-top: calc(55px+34px);
     }
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 400;
+}
 
 /*
     Bootstrap sizes:
@@ -625,35 +631,6 @@ footer hr {
 
 
 /* Experiments */
-body.parallax1 #homeJumbotron {
-    background-attachment: fixed;
-    z-index: 0;
-}
-
-body.parallax1 .logo {
-    position: fixed;
-    z-index: -2;
-}
-
-@media (max-width: 567px) {
-    body.parallax1 .logo {
-        right: auto;
-    }
-}
-
-body.parallax1 .section-container {
-    z-index: 0;
-    background-color: white;
-}
-
-body.parallax1 footer {
-    position: relative;
-    z-index: 0;
-}
-
-body.parallax2 .img-aktion, body.parallax2 .img-ausbildung {
-    background-attachment: fixed;
-}
 
 .no-shadows .questionmark, .no-shadows .shadow {
     box-shadow: none;
@@ -666,13 +643,16 @@ body.parallax2 .img-aktion, body.parallax2 .img-ausbildung {
     background-color: white;
 }
 
-.font-ubuntu p {
-    font-family: Ubuntu;
+body.font-weight-normal {
+    font-weight: 400;
+}
+
+.font-weight-normal p {
     font-weight: 300;
 }
 
-.font-squash p {
-    transform: scaleY(0.98);
+.heading-bold h1, .heading-bold h2, .heading-bold h3, .heading-bold h4, .heading-bold h5, .heading-bold h6 {
+    font-weight: 700;
 }
 
 
