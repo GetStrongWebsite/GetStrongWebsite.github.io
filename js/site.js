@@ -9,6 +9,10 @@ $(function () {
     $("#parallax1").click(() => $("body").toggleClass("parallax1"));
     $("#parallax2").click(() => $("body").toggleClass("parallax2"));
     $("#navbarLogo").click(() => $("body").toggleClass("navbarLogo"));
+    $("#shadows").click(() => $("body").toggleClass("no-shadows"));
+    $("#fontUbuntu").click(() => $("body").toggleClass("font-ubuntu"));
+    $("#fontSquash").click(() => $("body").toggleClass("font-squash"));
+    $("#pinExperimental").click(() => $(".experimental").toggleClass("pin"));
 });
 
 // Scroll buttons
