@@ -195,6 +195,7 @@ footer hr {
 
 .logo-text {
     font-family: Ubuntu;
+    font-weight: 400;
     font-size: 22px;
     color: white;
     transform: matrix(1, 0, 0, 0.83, 0, 0);
