@@ -8,10 +8,6 @@ body {
         padding-top: calc(55px+34px);
     }
 
-h1, h2, h3, h4, h5, h6 {
-    font-weight: 400;
-}
-
 /*
     Bootstrap sizes:
     sm: >= 576px
@@ -74,6 +70,30 @@ h1 {
     margin-top: 25px;
 }
 
+h2 {
+    font-size: 2.45rem;
+}
+
+.btn-circle {
+    font-size: 30px;
+    transition: font-size .15s ease-in-out, padding .15s ease-in-out, color .15s ease-in-out, background-color .15s ease-in-out;
+    width: 60px;
+    height: 60px;
+    padding-top: 5px;
+    border-radius: 35px;
+    color: rgba(255,255,255, 0.8);
+    position: absolute;
+    bottom: 10px;
+    outline: 0;
+}
+
+    .btn-circle:hover {
+        color: #fff;
+        background: rgba(255,255,255,.1);
+        font-size: 33px;
+        padding-top: 3px;
+    }
+
 .navbar-brand {
     font-family: Ubuntu;
     font-weight: 700;
@@ -107,13 +127,15 @@ h1 {
             #mainNavbar .navbar-collapse .nav-link {
                 padding-left: 30px;
                 padding-right: 30px;
-                box-shadow: 0 -35px 0 0 transparent;
-                transition: background-color ease-in-out 150ms, box-shadow ease-in-out 150ms;
+                box-shadow: transparent 0 -25px 0 0;
+                transition: background-color ease-in-out 250ms, box-shadow ease-in-out 250ms, color ease-in-out 250ms;
+                font-weight: 400;
             }
 
                 #mainNavbar .navbar-collapse .nav-link:hover, #mainNavbar .navbar-collapse .nav-item.active .nav-link {
                     background-color: #558b46;
-                    box-shadow: 0 -35px 0 0 #558b46;
+                    box-shadow: #558b46 0 -35px 0 0;
+                    color: rgba(255,255,255,0.85);
                 }
 }
 
@@ -157,7 +179,6 @@ footer hr {
 }
 
 .lgio-logo {
-    width: 75px;
     width: 75px;
     float: left;
 }
@@ -246,13 +267,13 @@ footer hr {
     overflow-x: hidden;
     overflow-y: hidden;
     position: relative;
-    height: calc(3350px - 35vw);
+    height: calc(3260px - 35vw);
     box-shadow: rgba(0,0,0,0.5) 0 -5px 13px -6px;
 }
 
 @media (min-width: 1200px) {
     .section-container {
-        height: calc(3350px - 12px * 35);
+        height: calc(3260px - 12px * 35);
     }
 }
 
@@ -269,7 +290,7 @@ footer hr {
 
 .img-ausbildung {
     position: absolute;
-    top: calc(2630px - 27vw);
+    top: calc(2540px - 27vw);
     width: 100%;
     height: 645px;
     background-image: url("/images/ausbildung.png");
@@ -279,7 +300,7 @@ footer hr {
 
 @media (min-width: 1200px) {
     .img-ausbildung {
-        top: calc(2630px - 12px * 27);
+        top: calc(2540px - 12px * 27);
     }
 }
 
@@ -303,7 +324,7 @@ footer hr {
 
 .colored-bar-blue {
     background-color: rgb(75, 136, 195);
-    height: calc(650px - 5vw);
+    height: calc(560px - 5vw);
     transform-origin: top center;
     transform: translateY(calc(1315px - 10vw)) skewY(11deg);
     width: 100%;
@@ -312,14 +333,14 @@ footer hr {
 
 @media (min-width: 1200px) {
     .colored-bar-blue {
-        height: calc(650px - 12px * 5);
+        height: calc(560px - 12px * 5);
         transform: translateY(calc(1315px - 12px * 10)) skewY(11deg);
     }
 }
 
 .colored-bar-yellow {
     position: absolute;
-    top: calc(2450px - 25vw);
+    top: calc(2360px - 25vw);
     width: 100%;
     height: calc(900px - 10vw);
     /*box-shadow: rgba(0,0,0,0.3) 0 0 10px -1px;*/
@@ -327,7 +348,7 @@ footer hr {
 
 @media (min-width: 1200px) {
     .colored-bar-yellow {
-        top: calc(2450px - 1200px * 25 / 100);
+        top: calc(2360px - 1200px * 25 / 100);
         height: calc(900px - 12px * 10);
     }
 }
@@ -399,7 +420,7 @@ footer hr {
 /* sm */
 @media (min-width: 576px) {
     .home-section {
-        font-size: 1.3rem;
+        font-size: 1.2rem;
     }
 }
 
@@ -468,22 +489,22 @@ footer hr {
 }
 
 .home-section.four {
-    top: calc(1910px - 15vw);
+    top: calc(1820px - 15vw);
 }
 
 @media (min-width: 1200px) {
     .home-section.four {
-        top: calc(1910px - 1200px * 15 / 100);
+        top: calc(1820px - 1200px * 15 / 100);
     }
 }
 
 .home-section.five {
-    top: calc(2660px - 25vw);
+    top: calc(2570px - 25vw);
 }
 
 @media (min-width: 1200px) {
     .home-section.five {
-        top: calc(2660px - 1200px * 25 / 100);
+        top: calc(2570px - 1200px * 25 / 100);
     }
 }
 
@@ -633,6 +654,26 @@ footer hr {
 
 /* Experiments */
 
+.navbar-logo {
+    display: none;
+}
+
+.navbar-logo-1 .navbar-logo.one, .navbar-logo-2 .navbar-logo.two {
+    display: inline;
+    height: 60px;
+    padding-right: 10px;
+    padding-left: 15px;
+    transform: scaleX(0.9);
+}
+
+.navbar-logo-3 .navbar-logo.three {
+    display: inline;
+    height: 55px;
+    padding-right: 10px;
+    padding-left: 15px;
+    margin-bottom: 3px;
+}
+
 .no-shadows .questionmark, .no-shadows .shadow {
     box-shadow: none;
     text-shadow: none;
@@ -656,35 +697,6 @@ body.font-weight-normal {
     font-weight: 700;
 }
 
-
-
-.navbar-logo {
-    display: none;
+.no-questionmark-shadow .questionmark {
+    text-shadow: none;
 }
-
-body.navbarLogo .navbar-logo {
-    display: inline;
-    height: 60px;
-    padding-right: 15px;
-    padding-left: 15px;
-}
-
-.btn-circle {
-    font-size: 30px;
-    transition: font-size .15s ease-in-out, padding .15s ease-in-out, color .15s ease-in-out, background-color .15s ease-in-out;
-    width: 60px;
-    height: 60px;
-    padding-top: 5px;
-    border-radius: 35px;
-    color: rgba(255,255,255, 0.8);
-    position: absolute;
-    bottom: 10px;
-    outline: 0;
-}
-
-    .btn-circle:hover {
-        color: #fff;
-        background: rgba(255,255,255,.1);
-        font-size: 33px;
-        padding-top: 3px;
-    }

@@ -4,10 +4,25 @@ if (!sessionStorage.getItem("playedAnimation")) {
     sessionStorage.setItem("playedAnimation", true);
 }
 
-// Write your Javascript code.
+// Experimental feature controll
+function toggleLogo(id) {
+    for (let i = 0; i <= 3; i++) {
+        $("body").removeClass("navbar-logo-" + i);
+        document.getElementById("navbarLogo" + i).checked = false;
+    }
+    document.getElementById("navbarLogo" + id).checked = true;
+    if (id != 0) {
+        $("body").addClass("navbar-logo-" + id);
+    }
+}
+
 $(function () {
-    $("#navbarLogo").click(() => $("body").toggleClass("navbarLogo"));
+    for (let i = 0; i <= 3; i++) {
+        $("#navbarLogo"+i).click(() => toggleLogo(i));
+    }
+
     $("#shadows").click(() => $("body").toggleClass("no-shadows"));
+    $("#questionmarkShadow").click(() => $("body").toggleClass("no-questionmark-shadow"));
     $("#fontNormal").click(() => $("body").toggleClass("font-weight-normal"));
     $("#headingBold").click(() => $("body").toggleClass("heading-bold"));
     $("#pinExperimental").click(() => $(".experimental").toggleClass("pin"));
