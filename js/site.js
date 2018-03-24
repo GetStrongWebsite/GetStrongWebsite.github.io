@@ -21,6 +21,7 @@ $(function () {
         $("#navbarLogo"+i).click(() => toggleLogo(i));
     }
 
+    $("#navbarHoverBg").click(() => $("body").toggleClass("no-navbar-hover-bg"));
     $("#shadows").click(() => $("body").toggleClass("no-shadows"));
     $("#questionmarkShadow").click(() => $("body").toggleClass("no-questionmark-shadow"));
     $("#fontNormal").click(() => $("body").toggleClass("font-weight-normal"));
