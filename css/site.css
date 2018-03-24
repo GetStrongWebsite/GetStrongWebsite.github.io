@@ -692,3 +692,9 @@ footer hr {
     box-shadow: none;
     background-color: transparent;
 }
+
+@media (max-width: 991px) {
+    .small-navbar-brand .navbar-brand {
+        font-size: 1.3rem;
+    }
+}
