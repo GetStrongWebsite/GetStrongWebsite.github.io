@@ -684,18 +684,6 @@ footer hr {
     background-color: white;
 }
 
-body.font-weight-normal {
-    font-weight: 400;
-}
-
-.font-weight-normal p {
-    font-weight: 300;
-}
-
-.heading-bold h1, .heading-bold h2, .heading-bold h3, .heading-bold h4, .heading-bold h5, .heading-bold h6 {
-    font-weight: 700;
-}
-
 .no-questionmark-shadow .questionmark {
     text-shadow: none;
 }
