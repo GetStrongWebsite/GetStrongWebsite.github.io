@@ -97,8 +97,9 @@ h2 {
 .navbar-brand {
     font-family: Ubuntu;
     font-weight: 700;
-    transform: scaleY(0.93);
     font-size: 1.85rem;
+    display: flex;
+    align-items: center;
 }
 
 .navbar-dark .navbar-brand {
@@ -660,18 +661,16 @@ footer hr {
 
 .navbar-logo-1 .navbar-logo.one, .navbar-logo-2 .navbar-logo.two {
     display: inline;
-    height: 60px;
+    height: 45px;
     padding-right: 10px;
     padding-left: 15px;
-    transform: scaleX(0.9);
 }
 
 .navbar-logo-3 .navbar-logo.three {
     display: inline;
-    height: 55px;
-    padding-right: 10px;
+    height: 45px;
+    padding-right: 15px;
     padding-left: 15px;
-    margin-bottom: 3px;
 }
 
 .no-shadows .questionmark, .no-shadows .shadow {
