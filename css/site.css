@@ -102,6 +102,12 @@ h2 {
     align-items: center;
 }
 
+@media (max-width: 991px) {
+    .navbar-brand {
+        font-size: 1.3rem;
+    }
+}
+
 .navbar-dark .navbar-brand {
     color: rgba(255,255,255, 0.9);
 }
@@ -693,8 +699,3 @@ footer hr {
     background-color: transparent;
 }
 
-@media (max-width: 991px) {
-    .small-navbar-brand .navbar-brand {
-        font-size: 1.3rem;
-    }
-}

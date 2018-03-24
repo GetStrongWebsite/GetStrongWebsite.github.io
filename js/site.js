@@ -24,7 +24,6 @@ $(function () {
     $("#navbarHoverBg").click(() => $("body").toggleClass("no-navbar-hover-bg"));
     $("#shadows").click(() => $("body").toggleClass("no-shadows"));
     $("#questionmarkShadow").click(() => $("body").toggleClass("no-questionmark-shadow"));
-    $("#smallNavbarBrand").click(() => $("body").toggleClass("small-navbar-brand"));
     $("#pinExperimental").click(() => $(".experimental").toggleClass("pin"));
 });
 
