@@ -1,0 +1,5 @@
+﻿
+/* Translate bootstrap text */
+.custom-file-input:lang(de) ~ .custom-file-label::after {
+    content: "Durchsuchen";
+}

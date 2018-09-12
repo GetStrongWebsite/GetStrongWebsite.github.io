@@ -1,0 +1,22 @@
+﻿
+.no-shadows {
+    .questionmark, .shadow {
+        box-shadow: none;
+        text-shadow: none;
+    }
+}
+
+.experimental.pin {
+    position: fixed;
+    bottom: 0;
+    background-color: white;
+}
+
+.no-questionmark-shadow .questionmark {
+    text-shadow: none;
+}
+
+.no-navbar-hover-bg #mainNavbar .navbar-collapse .nav-link:hover {
+    box-shadow: none;
+    background-color: transparent;
+}

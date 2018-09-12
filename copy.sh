@@ -2,6 +2,7 @@
 
 wget localhost:5000
 mv index.html.1 index.html
-cp ../NewGetStrongWebsite/NewGetStrongWebsite/wwwroot/css/site.css css/site.css
-cp ../NewGetStrongWebsite/NewGetStrongWebsite/wwwroot/js/site.js js/site.js
+cp ../NewGetStrongWebsite/NewGetStrongWebsite/wwwroot/css/* css/
+cp ../NewGetStrongWebsite/NewGetStrongWebsite/wwwroot/js/* js/
+cp -r ../NewGetStrongWebsite/NewGetStrongWebsite/wwwroot/lib/* lib/
 

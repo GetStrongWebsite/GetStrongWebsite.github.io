@@ -1,0 +1,369 @@
+﻿
+// Bootstrap sizes:
+//   sm: >= 576px
+//   md: >= 768px
+//   lg: >= 992px
+//   lg: >= 1200px
+
+
+$sections: ( ("three", 1400px, 10), ("four", 2010px, 20), ("five", 2750px, 30) );
+
+@mixin responsive-xl($attr, $px, $percent) {
+    #{$attr}: calc(#{$px} - #{$percent * 1vw});
+
+    @media (min-width: 1200px) {
+        #{$attr}: $px - 12px * $percent;
+    }
+}
+
+@mixin section-top($section-index, $px-mod: 0, $percent-mod: 0) {
+    $section: nth($sections, $section-index - 2);
+    $top-px: nth($section, 2) + $px-mod;
+    $top-percent: nth($section, 3) + $percent-mod;
+
+    @include responsive-xl(top, $top-px, $top-percent);
+}
+
+$blue-height-px: 750px;
+$blue-height-percent: 10;
+$total-height: 2720px + 645px + 70px;
+
+
+.btn-circle {
+    font-size: 30px;
+    transition: font-size .15s ease-in-out, padding .15s ease-in-out, color .15s ease-in-out, background-color .15s ease-in-out;
+    width: 60px;
+    height: 60px;
+    padding-top: 5px;
+    border-radius: 35px;
+    color: rgba(255, 255, 255, 0.8);
+    position: absolute;
+    bottom: 10px;
+    outline: 0;
+
+    &:hover {
+        color: #fff;
+        background: rgba(255, 255, 255, 0.1);
+        font-size: 33px;
+        padding-top: 3px;
+    }
+}
+
+#homeJumbotron {
+    height: 475px;
+    background-image: url("/images/jumbotron.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-x: 56%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @media (min-width: 992px) {
+        height: calc(100vh - 89px);
+    }
+}
+
+.user-signed-in #homeJumbotron {
+    @media (min-width: 992px) {
+        height: calc(100vh - 89px - 34px);
+    }
+}
+
+.logo {
+    right: 14%;
+
+    img {
+        height: 250px;
+    }
+
+    @media (min-width: 768px) {
+        position: absolute;
+        right: 7%;
+    }
+
+    @media (min-width: 992px) {
+        right: 12%;
+
+        img {
+            height: 300px;
+        }
+    }
+
+
+    @media (min-width: 1500px) {
+        right: 25%;
+
+        img {
+            height: 350px;
+        }
+    }
+}
+
+.logo-text {
+    font-family: Ubuntu;
+    font-weight: 400;
+    font-size: 26px;
+    color: white;
+    transform: matrix(1, 0, 0, 0.83, 0, 0);
+    margin-top: 10px;
+
+    @media (min-width: 768px) {
+        color: inherit;
+        margin-top: 0;
+    }
+
+    h2 {
+        margin-bottom: -13px;
+        font-weight: 700;
+        font-size: 65px;
+    }
+
+    div {
+        padding-left: 4px;
+    }
+}
+
+.section-container {
+    overflow-x: hidden;
+    overflow-y: hidden;
+    position: relative;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.5) 0 -5px 13px -6px;
+
+    @include responsive-xl(height, $total-height, 40);
+}
+
+.img-aktion {
+    position: absolute;
+    top: 600px;
+    background-image: url("/images/skateboard.png");
+    width: 100%;
+    height: 900px;
+    background-position-x: center;
+    background-size: cover;
+}
+
+.img-ausbildung {
+    position: absolute;
+    width: 100%;
+    height: 645px;
+    background-image: url("/images/buecher.png");
+    background-position-x: center;
+    background-size: cover;
+
+    @include section-top(5, -30px, 2);
+}
+
+
+.colored-bar-red {
+    background-color: rgba(234, 69, 67, 0.9);
+    height: 650px;
+    transform-origin: top center;
+    transform: translateY(550px) skewY(-20deg);
+    width: 100%;
+    position: absolute;
+}
+
+.colored-bar-green {
+    background-color: #558b46;
+    transform: translateX(35%) translateY(-100vh) rotate(30deg);
+    height: 100vh;
+    width: 100vw;
+    transform-origin: bottom left;
+    position: absolute;
+}
+
+.colored-bar-blue {
+    background-color: rgb(75, 136, 195);
+    transform-origin: top center;
+    transform: translateY(calc(1315px - 10vw)) skewY(11deg);
+    width: 100%;
+    position: absolute;
+
+    @include responsive-xl(height, $blue-height-px, $blue-height-percent);
+
+    @media (min-width: 1200px) {
+        transform: translateY(calc(1315px - 12px * 10)) skewY(11deg);
+    }
+}
+
+
+.colored-bar-yellow {
+    position: absolute;
+    width: 100%;
+
+    polygon {
+        fill: rgba(250, 229, 183, 0.9);
+    }
+
+    @include section-top(5, -210px);
+    @include responsive-xl(height, 900px, 10);
+}
+
+
+.icon {
+    width: 100px;
+    height: 100px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    background-color: white;
+    border-radius: 50%;
+    margin-bottom: 35px;
+    box-shadow: rgba(0, 0, 0, 0.4) 2px 3px 12px -3px;
+
+    img {
+        width: 80px;
+    }
+
+    &.icon-aktion img {
+        margin-top: 10px;
+    }
+
+    &.icon-gemeinschaft img {
+        width: 60px;
+        margin-top: -7px;
+        margin-left: 2px;
+    }
+
+    &.icon-ausbildung img {
+        height: 70px;
+    }
+}
+
+.questionmark {
+    color: #bcdab2;
+    position: absolute;
+    font-size: 600px;
+    font-family: Helvetica;
+    font-weight: bold;
+    transform: translateX(37vw) translateY(-130px) rotate(24deg);
+    line-height: 1;
+    text-shadow: rgba(0, 0, 0, 0.2) 1px 1px 12px;
+}
+
+.home-section {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 100%;
+    align-items: center;
+    text-align: center;
+    padding: 0 30px;
+
+    @media (min-width: 500px) {
+        font-size: 1.15rem;
+    }
+
+    @media (min-width: 576px) {
+        font-size: 1.2rem;
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    p {
+        margin-top: 15px;
+        max-width: 710px;
+    }
+
+    &.one {
+        h1 {
+            margin-top: 100px;
+
+            @media (min-width: 576px) {
+                margin-right: 25%;
+            }
+
+            @media (min-width: 992px) {
+                margin-top: 130px;
+            }
+        }
+
+        p {
+            margin-top: 40px;
+            max-width: 500px;
+
+            @media (min-width: 576px) {
+                margin-top: 60px;
+            }
+
+            @media (min-width: 768px) {
+                margin-right: 15%;
+            }
+
+            @media (min-width: 1200px) {
+                margin-top: 80px;
+            }
+        }
+    }
+
+    &.two {
+        top: 700px;
+    }
+
+    @each $index, $name in (3: "three", 4: "four", 5: "five") {
+        &.#{$name} {
+            @include section-top($index);
+        }
+    }
+}
+
+.animation {
+    .logo {
+        opacity: 0;
+        animation: opacity-in-up 1s ease;
+        animation-delay: 700ms;
+        animation-fill-mode: forwards;
+    }
+
+    .btn-circle.page-scroll {
+        opacity: 0;
+        animation: opacity-in 1s ease;
+        animation-delay: 1s;
+        animation-fill-mode: forwards;
+    }
+}
+
+/* Logo Page */
+@media (max-width: 767px) {
+    .logo-image {
+        text-align: center;
+    }
+
+    .logo-explanation {
+        ul {
+            padding: 0;
+        }
+
+        li {
+            list-style-type: none;
+            text-align: justify;
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .logo-image {
+        padding-left: 15px;
+        padding-top: 30px;
+        flex-grow: unset;
+    }
+}
+
+.logo-image img {
+    width: 220px;
+}
+
+@media (min-width: 992px) {
+    .logo-image {
+        padding-top: 50px;
+
+        img {
+            width: 300px;
+        }
+    }
+}

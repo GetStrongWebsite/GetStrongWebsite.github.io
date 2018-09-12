@@ -1,0 +1,94 @@
+﻿@import "variables.scss";
+
+.nav-pills .nav-link.active {
+    background-color: $primary_green;
+}
+
+address::first-line {
+    font-weight: bold;
+}
+
+#map {
+    background-color: darkgrey;
+}
+
+.map-sm {
+    height: 300px;
+}
+
+.map-lg {
+    width: 100%;
+    height: 400px;
+    border: 1px solid #ddd;
+}
+
+.input-search {
+    border-radius: 2px;
+    box-shadow: none !important;
+}
+
+.input-search__btn {
+    background-color: white;
+    border: 1px solid #ced4da;
+    border-left: none;
+    border-radius: 2px;
+}
+
+.checkbox {
+    label, input {
+        cursor: pointer;
+    }
+}
+
+.checkbox.checkbox-lg {
+    input {
+        margin-top: 2px;
+        width: 25px;
+        height: 25px;
+        margin-right: 5px;
+    }
+
+    label {
+        display: flex;
+        align-items: center;
+    }
+}
+
+.btn.btn-primary {
+    background-color: $primary_green;
+    border-color: $primary_green;
+
+    &:hover {
+        background-color: darken($primary_green, 5%);
+        border-color: darken($primary_green, 15%);
+    }
+
+    &:not(:disabled):not(.disabled) {
+        &:active, &.active {
+            background-color: darken($primary_green, 10%);
+            border-color: darken($primary_green, 15%);
+        }
+    }
+}
+
+.btn-toggle-green {
+    background-color: $primary_green;
+    color: darken(white, 10%);
+    border-color: $primary_green;
+    transition: border-color 300ms ease, color 300ms ease;
+
+    &:hover:not(.active) {
+        border-color: white;
+        color: white;
+        border-radius: 1px;
+    }
+}
+
+.btn-toggle-green.active {
+    background-color: white;
+    color: #212529;
+
+    &:hover {
+        background-color: darken(white, 2%);
+    }
+}

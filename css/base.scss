@@ -1,0 +1,257 @@
+﻿@import "variables.scss";
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    font-family: Ubuntu, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-weight: 300;
+    display: flex;
+    flex-direction: column;
+    padding-top: 81px;
+    background-color: #e6e6e4;
+    min-height: 100vh;
+
+    @media (min-width: 992px) {
+        padding-top: 90px;
+    }
+
+    &.user-signed-in {
+        padding-top: 81px + 34px;
+
+        @media (min-width: 992px) {
+            padding-top: 90px + 34px;
+        }
+    }
+
+    @media print {
+        padding-top: 0;
+        margin-bottom: 0;
+        background-color: white;
+        min-height: initial;
+    }
+
+    &.mce-content-body {
+        padding-top: 0;
+        margin-bottom: 0;
+        background-color: white;
+        min-height: initial;
+    }
+}
+
+h1 {
+    margin-top: 10px;
+}
+
+h2 {
+    font-size: 2.45rem;
+}
+
+b, strong {
+    font-weight: bold;
+}
+
+a {
+    color: $light_green;
+    transition: color .1s ease-in-out;
+
+    &:hover {
+        text-decoration: none;
+        color: lighten($light_green, 10%);
+    }
+}
+
+p {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+}
+
+.container.page-content, .container.page-content-short {
+    background-color: white;
+    padding: 20px 30px;
+    margin-bottom: 30px;
+    box-shadow: 0 0 5px 0px lightgrey;
+
+    @media (min-width: 576px) {
+        margin-top: 30px;
+    }
+}
+
+.container.page-content {
+    min-height: calc(90vh - 50px);
+}
+
+nav {
+    @media print {
+        display: none;
+    }
+}
+
+.navbar-brand {
+    font-family: Ubuntu;
+    font-weight: 700;
+    font-size: 1.85rem;
+    display: flex;
+    align-items: center;
+    /*@media (max-width: 991px) {
+        font-size: 1.3rem;
+    }*/
+}
+
+@media (min-width: 992px) {
+    #mainNavbar {
+        height: 90px;
+
+        .navbar-collapse {
+            height: 60px;
+            align-items: flex-end;
+
+            .nav-link {
+                padding-left: 30px;
+                padding-right: 30px;
+                box-shadow: transparent 0 -25px 0 0;
+                transition: background-color ease-in-out 250ms, box-shadow ease-in-out 250ms, color ease-in-out 250ms;
+                font-weight: 400;
+
+                &:hover {
+                    background-color: $primary_green;
+                    box-shadow: $primary_green 0 -35px 0 0;
+                    color: rgba(255, 255, 255, 0.85);
+                }
+            }
+
+            .nav-item.active .nav-link {
+                background-color: #558b46;
+                box-shadow: #558b46 0 -35px 0 0;
+                color: rgba(255, 255, 255, 0.85);
+            }
+        }
+    }
+}
+
+.navbar-logo.one {
+    display: inline;
+    height: 50px;
+    padding-right: 10px;
+}
+
+.navbar-logo.two {
+    display: inline;
+    height: 55px;
+
+    @media (min-width: 992px) {
+        margin-top: -12px;
+    }
+}
+
+.navbar-collapse.collapse.show .click-catcher {
+    position: fixed;
+    left: 0;
+    right: 0;
+    height: 100%;
+    margin-top: 10px;
+}
+
+
+footer {
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.5) 0 15px 20px -13px inset;
+    margin-top: auto;
+
+    @media print {
+        display: none;
+    }
+
+    .container {
+        min-height: 200px;
+
+        @media (min-width: 768px) {
+            height: 200px;
+        }
+    }
+
+    .row {
+        height: 100%;
+    }
+
+    ul {
+        list-style: none;
+        margin-bottom: 0;
+        padding-left: 0;
+    }
+
+    a {
+        color: lightgray;
+
+        &:hover {
+            color: white;
+        }
+    }
+
+    hr {
+        width: 40%;
+        border-color: grey;
+    }
+}
+
+
+.lgio-logo {
+    width: 75px;
+    float: left;
+}
+
+.list-icon {
+    /*font-size: 20px;*/
+    height: 1em;
+    margin-right: 5px;
+}
+
+.navbar-dark .navbar-brand {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.user-signed-in #mainNavbar {
+    margin-top: 34px;
+}
+
+.admin-navbar {
+    background-color: $primary_green;
+
+    .navbar-nav .nav-link {
+        color: rgba(255, 255, 255, 0.8);
+        transition: color .15s ease-in-out;
+
+        &:hover {
+            color: white;
+        }
+    }
+}
+
+#qrCode {
+    margin: 15px;
+}
+
+.animation {
+    .navbar-brand {
+        opacity: 0;
+        animation: opacity-in 1s ease;
+        animation-delay: 300ms;
+        animation-fill-mode: forwards;
+    }
+}
+
+@media (min-width: 992px) {
+    .animation #mainNavbar .navbar-collapse .nav-item {
+        opacity: 0;
+        animation: opacity-in 1s ease;
+        animation-fill-mode: forwards;
+
+        @for $i from 1 through 5 {
+            &:nth-child($i) {
+                animation-delay: 450ms + (150ms * $i);
+            }
+        }
+    }
+}

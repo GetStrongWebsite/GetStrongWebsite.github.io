@@ -1,0 +1,9 @@
+{
+	"version": 3,
+	"file": "translation.css",
+	"sources": [
+		"translation.scss"
+	],
+	"mappings": "AAEA,AAAgD,kBAA9B,AAAA,KAAM,CAAA,AAAA,EAAE,IAAI,kBAAkB,AAAA,OAAO,AAAC,CACpD,OAAO,CAAE,aAAc,CAC1B",
+	"names": []
+}

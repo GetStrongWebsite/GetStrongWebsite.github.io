@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="de">
 <head>
@@ -5,10 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <title>GetStrong - power your life!</title>
 
-    <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,700" rel="stylesheet">
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#00853b">
+    <meta name="theme-color" content="#00853b">
+
+    
+
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,700|Open+Sans|Roboto" rel="stylesheet">
     
         <link rel="stylesheet" href="/lib/bootstrap-4.0.0/css/bootstrap.css" />
-        <link rel="stylesheet" href="/css/site.css" />
+        <link rel="stylesheet" href="/css/main.min.css" />
     
     
 
@@ -19,9 +30,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow-bottom" id="mainNavbar">
         <div class="container">
             <a class="navbar-brand mr-auto" href="/">
-                <img class="navbar-logo one" src="/images/logo.svg" />
-                <img class="navbar-logo two" src="/images/navbar-logo.svg" />
-                <img class="navbar-logo three" src="/images/logo-löwe-transparent.png" />
+                <img class="navbar-logo two" src="/images/lion_white.svg" />
                 GetStrong
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNavbarContent" aria-controls="mainNavbarContent" aria-expanded="false" aria-label="Menülesite umschalten">
@@ -29,27 +38,34 @@
             </button>
             <div class="collapse navbar-collapse" id="mainNavbarContent">
                 <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
-                    <li class="nav-item active" called="true">
+                    <li class="nav-item active">
                         <a class="nav-link" href="/">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="">News</a>
+                        <a class="nav-link" href="/Calendar">Termine</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="">Teams</a>
+                        <a class="nav-link" href="/News">News</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Teams">Teams</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/Logo">Logo</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/Kontakt">Kontakt</a>
+                        <a href="/Flyer_GetStrong_2017.pdf" target="_blank" rel="noopener" class="nav-link">Flyer</a>
                     </li>
                 </ul>
+
+                <div class="click-catcher" data-toggle="collapse" data-target="#mainNavbarContent"></div>
             </div>
         </div>
     </nav>
 
-    <div class="jumbotron-fluid w-100" id="homeJumbotron">
+    
+
+<div class="jumbotron-fluid w-100" id="homeJumbotron">
     <div class="logo d-flex flex-column align-items-center">
         <img src="/images/logo.svg" />
         <div class="logo-text">
@@ -65,8 +81,8 @@
     <div class="img-aktion"></div>
     <div class="img-ausbildung"></div>
 
-    <div class="colored-bar-red z-minus-1 shadow"></div>
-    <div class="colored-bar-green z-minus-1 shadow"></div>
+    <div class="colored-bar-red shadow"></div>
+    <div class="colored-bar-green shadow"></div>
     <div class="colored-bar-blue shadow"></div>
     <svg class="colored-bar-yellow hidden visible-xl" viewBox="0 0 100 100" preserveAspectRatio="none">
         <polygon points="13,20 100,0 100,60 80,100 13,100" />
@@ -74,28 +90,28 @@
     <svg class="colored-bar-yellow hidden-xl" width="100vw" height="700px" viewBox="0 0 100 100" preserveAspectRatio="none">
         <polygon points="0,20 100,0 100,100 0,100" />
     </svg>
-    <div class="questionmark z-minus-1">?</div>
+    <div class="questionmark">?</div>
 
     <section class="home-section one clearfix" id="about">
         <h1>Wir sind</h1>
         <p>
-            ein Programm des Regnum Christi für Jungen und junge Männer im Alter von 11 bis 18 Jahren, das in verschiedenen Regionen sechs thematische Wochenenden im Jahr (Samstagvormittag bis Sonntagmittag) anbietet.
+            ein Programm des Regnum Christi für Jungen und junge Männer im Alter von 11 bis 18 Jahren, das in verschiedenen Regionen Süddeutschlands sechs thematische Wochenenden im Jahr anbietet.
         </p>
     </section>
 
     <section class="home-section two">
         <div class="icon icon-aktion">
-            <img src="/images/aktion.svg" />
+            <img src="/images/icon_aktion.svg" />
         </div>
         <h2 class="text-dark">Aktion</h2>
         <p class="text-light">
-            Zu jedem Wochenende gehören auch Aktivitäten, welche die Teilnehmer ansprechen, sportlich herausfordern und die Gemeinschaft fördern. Beispielsweise Klettern, Bogenschießen, Erlebnisschwimmbad, Geländespiele, Hüttenwochenende oder Wasserski.
+            Zu jedem Wochenende gehören Aktivitäten, welche die Teilnehmer ansprechen, sportlich herausfordern und die Gemeinschaft fördern. Beispielsweise Klettern, Bogenschießen, Erlebnisschwimmbad, Geländespiele, Hüttenwochenende oder Wasserski.
         </p>
     </section>
 
     <section class="home-section three">
         <div class="icon icon-gemeinschaft">
-            <img src="/images/gemeinschaft.svg" />
+            <img src="/images/icon_gemeinschaft.svg" />
         </div>
         <h2 class="text-dark">Gemeinschaft</h2>
         <p class="text-light">
@@ -105,7 +121,7 @@
 
     <section class="home-section four">
         <div class="icon">
-            <img src="/images/spiritualität.svg" />
+            <img src="/images/icon_spiritualitaet.svg" />
         </div>
         <h2 class="text-dark">Spiritualität</h2>
         <p class="text-dark">
@@ -115,7 +131,7 @@
 
     <section class="home-section five">
         <div class="icon icon-ausbildung">
-            <img src="/images/ausbildung.svg" />
+            <img src="/images/icon_ausbildung.svg" />
         </div>
         <h2 class="text-dark">Ausbildung</h2>
         <p class="text-dark">
@@ -125,27 +141,57 @@
 </div>
 
 
+    
+
+    <nav id="cookieConsent" class="navbar navbar-light navbar-expand-lg bg-light fixed-bottom" role="alert">
+        <div class="container">
+            <span class="navbar-brand"><i class="fas fa-info-circle fa-sm" aria-hidden="true"></i></span>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#cookieConsentContent" aria-controls="cookieConsentContent" aria-expanded="false">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="cookieConsentContent">
+                <p class="navbar-nav mr-auto py-3 py-xl-0">
+                    Mit der Nutzung unserer Dienste erklären Sie sich damit einverstanden, dass wir Cookies verwenden.
+                </p>
+                <div class="d-flex">
+                    <a class="btn btn-info navbar-btn ml-auto mr-1" href="/Datenschutz">Weitere Informationen</a>
+                    <button type="button" class="btn btn-secondary navbar-btn" data-cookie-string=".AspNet.Consent=yes; expires=Thu, 12 Sep 2019 18:33:00 GMT; path=/; samesite=lax">Ok</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <script>
+        (function () {
+            document.querySelector("#cookieConsent button[data-cookie-string]").addEventListener("click", function (el) {
+                document.cookie = el.target.dataset.cookieString;
+                document.querySelector("#cookieConsent").classList.add("d-none");
+            }, false);
+        })();
+    </script>
+
+
     <footer class="text-light bg-dark">
         <div class="container">
             <div class="row flex-md-row-reverse justify-content-md-end">
                 <div class="col-md-3 col-xl-2 d-flex flex-column justify-content-center align-items-center align-items-md-end pt-5 pb-3 py-md-0">
                     <ul>
-                        <li><a href="http://www.regnumchristi.eu/de/" target="_blank"><img class="list-icon" src="/images/rc-logo.png" />Regnum Christi</a></li>
+                        <li><a href="http://www.ecyd.eu" target="_blank"><img class="list-icon" src="/images/ecyd_logo_small.png" />ECYD</a></li>
+                        <li><a href="http://www.regnumchristi.eu/de/" target="_blank"><img class="list-icon" src="/images/rc_logo_small.png" />Regnum Christi</a></li>
                         <li><a href="https://www.facebook.com/RegnumChristiundLegionaereChristi" target="_blank"><i class="fab fa-facebook-square list-icon"></i>Facebook</a></li>
                     </ul>
                 </div>
                 <hr class="hidden-md" />
-                <a href="http://lgio.org" target="_blank" class="col-md-6 col-lg-4 d-flex flex-row justify-content-center align-items-center text-lightgrey py-3 py-md-0">
-                    <img class="lgio-logo mr-3" src="/images/lgio_logo.png" />
+                <a href="http://lgio.org" target="_blank" class="col-md-6 col-lg-4 d-flex flex-row justify-content-center align-items-center py-3 py-md-0">
+                    <img class="lgio-logo mr-3" src="/images/lgio_logo_small.png" />
                     <div class="text-md-center">
                         Looking Good - Inside &amp; Out<br />
                         <span class="text-darkgrey">Programm für Mädchen</span>
                     </div>
                 </a>
                 <hr class="hidden-md" />
-                <div class="offset-lg-1 offset-xl-2 col-md-3 col-xl-2 d-flex flex-column justify-content-center align-items-center align-items-md-start pt-3 pb-5 py-md-0">
-                    <div class="text-lightgrey">
-                        <a href="">Kontakt</a> - <a href="">Impressum</a><br />
+                <div class="offset-xl-1 col-md-3 col-xl-3 d-flex flex-column justify-content-center align-items-center pt-3 pb-5 py-md-0">
+                    <div class="text-lightgrey text-align-center">
+                        <a href="/Impressum">Impressum</a> <span class="hidden-md-only">-</span> <a href="/Datenschutz">Datenschutz</a><br />
                         <span class="text-darkgrey">&copy; 2018 - GetStrong</span>
                     </div>
                 </div>
@@ -153,24 +199,12 @@
         </div>
     </footer>
 
-    <div class="experimental pin">
-        <label><input type="radio" id="navbarLogo0" checked /> Kein Navbar Logo</label>
-        <label><input type="radio" id="navbarLogo1" /> Navbar Logo 1</label>
-        <label><input type="radio" id="navbarLogo2" /> Navbar Logo 2</label>
-        <label><input type="radio" id="navbarLogo3" /> Navbar Logo 3</label>
-        <label><input type="checkbox" id="navbarHoverBg" checked /> Navbar Hover Hintergrund</label>
-        <label><input type="checkbox" id="shadows" checked /> Schatten</label>
-        <label><input type="checkbox" id="questionmarkShadow" checked /> Fragezeichen Schatten</label>
-        <label><input type="checkbox" id="smallNavbarBrand" /> Navbar Logo Klein</label>
-        <label><input type="checkbox" id="pinExperimental" checked /> Anpinnen</label>
-    </div>
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     
         <script src="/lib/jquery-3.3.1.min.js"></script>
         <script src="/lib/bootstrap-4.0.0/js/bootstrap.js"></script>
         <script src="/lib/jquery.easing.1.3.js"></script>
-        <script src="/js/site.js?v=5CnaYGUt8uzCzlZwwufRCbcCKXYQ2UL9Hrp_D-qD0WA"></script>
+        <script src="/js/site.js?v=2zpryFzR30jZJQO3iACbGj-wH7W0PUjMNCQXLKMOn8A"></script>
     
     
 
