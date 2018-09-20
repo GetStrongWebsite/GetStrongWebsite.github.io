@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <title>Team Regensburg &ndash; GetStrong</title>
+        <title>News &ndash; GetStrong</title>
 
     <!-- Favicons -->
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -44,10 +44,10 @@
                     <li class="nav-item">
                         <a class="nav-link" href="/Termine">Termine</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item active">
                         <a class="nav-link" href="/News">News</a>
                     </li>
-                    <li class="nav-item active">
+                    <li class="nav-item">
                         <a class="nav-link" href="/Teams">Teams</a>
                     </li>
                     <li class="nav-item">
@@ -66,33 +66,67 @@
     
 
 
-
-
 <div class="container page-content">
-    <h1>Team Regensburg</h1>
+    <div class="article-nav">
+        <div class="article-nav__bg shadow-bottom">
+            <div class="article-nav__content">
+                <span class="text-light hidden visible-md" style="font-size: 0.9em">Sortieren nach:</span>
+                <button id="btn-sort-date" class="btn btn-toggle-green ml-sm-3 rounded-tiny " type="button" title="Artikel nach Datum sortieren">Datum</button>
+                <button id="btn-sort-teams" class="btn btn-toggle-green ml-sm-2 rounded-tiny active" type="button" title="Artikel nach Teams sortieren">Teams</button>
 
-    <div class="row">
-        <div class="col-md-4">
-            <img class="fit" src="/uploads/images/groups/Regensburg.jpg" />
-        </div>
-        <div class="col-md-5 mt-3 mt-md-0">
-            <address>
-                Daniel Zenger<br />
-                &#x2B;49 175 8293639<br />
-                <span>oberpfalz@<span hidden>Spam Bot Blocker</span>get-strong.org</span>
-            </address>
-
-            <a class="btn btn-primary mt-md-3" href="/Termine">Zu einem Treffen anmelden</a>
+                <form class="pl-3 ml-auto mr-2" method="get">
+                    <div class="input-group">
+                        <input name="search" class="form-control input-search" type="search" value="" placeholder="Suchen" />
+                        <div class="input-group-append">
+                            <button class="btn btn-light input-search__btn" type="submit"><i class="fa fa-search"></i></button>
+                        </div>
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
+    <div class="article-nav__phantom"></div>
 
-    <div class="mt-5">
-        <h2>News</h2>
-
+        <div class="article-group pl-1 pl-sm-4">
+            Kein Team
+        </div>
         <div class="row px-sm-4">
+                <a class="col-md-6 col-lg-4" href="/News/Test2">
+                    <div class="article-item">
+                        <div class="article-item__wrapper">
+                            <div class="article-item__image" style="background-image: url(/uploads/images/articles/thumbs/Test2.jpg)"></div>
+                            <div class="article-item__text">
+                                <h3>Test</h3>
+                                <small class="d-block">
+                                    Montag, 13. August 2018
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+                </a>
         </div>
-    </div>
+        <div class="article-group pl-1 pl-sm-4">
+            W&#xFC;rzburg
+        </div>
+        <div class="row px-sm-4">
+                <a class="col-md-6 col-lg-4" href="/News/Testartikel">
+                    <div class="article-item">
+                        <div class="article-item__wrapper">
+                            <div class="article-item__image" style="background-image: url(/uploads/images/articles/thumbs/BraucheichGott.jpg)"></div>
+                            <div class="article-item__text">
+                                <h3>Brauche ich Gott?</h3>
+                                <small class="d-block">
+                                        <span>W&#xFC;rzburg<br /></span>
+                                    Samstag, 4. August 2018
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+        </div>
 </div>
+
+
 
     
 
@@ -162,5 +196,38 @@
     
 
     
+    <script>
+        function getParameterByName(name) {
+            var match = RegExp('[?&]' + name + '=([^&]*)').exec(window.location.search);
+            return match && decodeURIComponent(match[1].replace(/\+/g, ' '));
+        }
+
+        function sortBy(val) {
+            let params = {
+                sortBy: val
+            };
+            let searchParam = getParameterByName("search");
+            if (searchParam)
+                params.search = searchParam;
+            window.location.href = window.location.href.split("?")[0] + "?" + $.param(params);
+        }
+
+        $(function () {
+            let totalH = $('.article-nav').offset().top - $('.page-content').offset().top + 30;
+            $(window).bind('scroll', function () {
+                let vPos = $(window).scrollTop();
+
+                if (totalH < vPos) {
+                    $('.article-nav').addClass("fixed");
+                } else {
+                    $('.article-nav').removeClass("fixed");
+                }
+            });
+
+            $('#btn-sort-date').click(() => sortBy("date"));
+            $('#btn-sort-teams').click(() => sortBy("teams"));
+        });
+    </script>
+
 </body>
 </html>
