@@ -3,7 +3,7 @@
 echo "Downloading index page"
 wget -q localhost:5000 -O index.html
 
-pages=( "Datenschutz" "Impressum" "Calendar" "News" "News?sortBy=date" "News?sortBy=teams" "News/Test2" "News/Testartikel" "Teams" "Team/Würzburg" "Team/Regensburg" "Logo" )
+pages=( "Datenschutz" "Impressum" "Calendar" "News" "News/Test2" "News/Testartikel" "Teams" "Team/Würzburg" "Team/Regensburg" "Logo" )
 
 for page in "${pages[@]}"
 do
